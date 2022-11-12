@@ -6,14 +6,14 @@ spec:
   capacity:
      storage: 2Gi
   volumeMode: Filesystem
-  storageClassName: ""
-#  storageClassName: standard
+  # storageClassName: ""
+  storageClassName: standard
   accessModes:
     - ReadWriteMany
   csi:
-    driver: efs.csi.aws.com
-    volumeHandle: fs-0b8792b3fcf6799de
-#    - ReadWriteOnce
-#  hostPath:
-#    path: /var/lib/mysql
-#    type: DirectoryOrCreate
+  #   driver: efs.csi.aws.com
+  #   volumeHandle: fs-0b8792b3fcf6799de
+   - ReadWriteOnce
+  hostPath:
+   path: /var/lib/mysql
+   type: DirectoryOrCreate
