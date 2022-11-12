@@ -23,7 +23,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: rhndeveloper/myweb:latest
+      - image: rhndeveloper/myweb:<TAG>
         imagePullPolicy: Always
         name: myweb
 
