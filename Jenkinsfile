@@ -35,6 +35,7 @@ pipeline {
             sh 'kubectl apply -f secret.yaml'
             sh 'kubectl apply -f mysql-pv.yaml'
             sh 'kubectl apply -f mysql-pvc.yaml'
+            sh 'sleep 10 '
             sh 'kubectl apply -f deployment-mysql.yaml'
             sh 'kubectl apply -f svc-mysql.yaml'
           }
