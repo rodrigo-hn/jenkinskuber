@@ -30,6 +30,7 @@ pipeline {
       steps {
         container('kubectl') {
           withCredentials([file(credentialsId: 'mykubeconfig', variable: 'KUBECONFIG')]) {
+
             sh 'kubectl apply -f myweb.yaml'
             sh 'kubectl apply -f secret.yaml'
             sh 'kubectl apply -f mysql-pv.yaml'
