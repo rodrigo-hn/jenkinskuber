@@ -37,6 +37,7 @@ pipeline {
                     docker build -t ${name_imagen}:${tag_imagen} . -f ./jobs/dockerweb/ 
 
                     '''
+                    sh 'imagen creada'
                     }
                     
                 }                    
