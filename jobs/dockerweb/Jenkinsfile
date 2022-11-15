@@ -33,12 +33,12 @@ pipeline {
         stage('build') {
             steps {
                 script{
-                    cmd 'echo "imagen docker"'
-                    cmd ''' 
+                    bat 'echo "imagen docker"'
+                    bat ''' 
                     docker build -t ${name_imagen}:${tag_imagen} . -f ./jobs/dockerweb/ 
 
                     '''
-                    cmd 'echo "imagen creada"'
+                    bat 'echo "imagen creada"'
                     }
                     
                 }                    
