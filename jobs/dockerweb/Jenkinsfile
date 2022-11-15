@@ -35,9 +35,9 @@ pipeline {
                 script{
                     sh '''echo "imagen docker"'''
                     sh ' ls -la'
-                    sh ' ./ ls -la'
+                    sh ' ls -la jobs/dockerweb/'
                     sh ''' 
-                    docker build -t ${name_imagen}:${tag_imagen} . -f ./jobs/dockerweb/ 
+                    docker build -t ${name_imagen}:${tag_imagen} . -f jobs/dockerweb/ 
 
                     '''
                     sh 'echo "imagen creada"'
